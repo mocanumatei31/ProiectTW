@@ -1,0 +1,360 @@
+html{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: mintcream;
+}
+header{
+    background-color:mediumseagreen;
+    height:4em;
+    width:94em;
+    font-size: medium;
+    border:solid 0.1em;
+    border-color:black;
+    padding:0;
+    margin:0;
+}
+header ul{
+    list-style: none;
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+header a{
+    padding-left:7em;
+    padding-right:7em;
+    color:antiquewhite;
+    text-decoration: none;
+    font-size:1.5em;
+}
+header div{
+    margin-right:13em;
+    margin-left:1em;
+    color:antiquewhite;
+    text-decoration: none;
+    font-size:1.5em;
+    display: inline-block;
+    position: relative;
+    padding-bottom:2em;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    margin:0;
+    background-color:antiquewhite;
+    font-size:0.75em;
+    z-index:1;
+    padding:0;
+    
+}
+.dropdown:hover .dropdown-content{
+    display:grid;    
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr;
+}
+header li #Logo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:2em;
+    border-right:solid 0em;
+    border-left:0;
+}
+.dropdown-row{
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    margin-bottom:0.5em;
+    color:mediumseagreen;
+    width:15em;
+    border-bottom:solid 0.01em black;
+}
+.dropdown-row::after{
+    content:'>';
+    
+    color:black;
+}
+
+.banner{
+    display: flex;
+    justify-content:center;
+}
+
+.sliding-promo{
+    height:20em;
+    width:45em;
+    display:flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    background-color:gold;
+    margin-top:1vh;
+    border:1vw double mediumseagreen;
+    text-decoration: none;
+}
+.sliding-promo p{
+    padding-top:1em;
+    text-decoration: none;
+    color:mediumseagreen;
+    padding-left:2em;
+    font-size: 2vw;
+    font-weight:bolder;
+    text-shadow:1px 1px 10px white;
+    animation: move 2s infinite;
+}
+@keyframes move{
+    0%{
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+    25%{
+        color:chartreuse;
+    }
+    50%{
+        font-size:2.5vw;
+        color:greenyellow;
+        transform: translate(6vw,9vh);
+    }
+    75%{
+        color:chartreuse;
+    }
+    100%{
+        font-size:2vw;
+        transform: translate(0,0);
+    }
+}
+
+.intro{
+    margin-left:3vw;
+    font-size:2em;
+    border-bottom:solid 0.05em;
+    border-bottom-color:gold;
+    width:20em;
+    font-weight:bolder;
+    transition:color 3s, width 1s, transform 2s;
+}
+.intro:hover{
+    color:crimson;
+    width:5em;
+    transform:scale(0.66);
+}
+
+.item-select{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap:0.5em;
+    margin-left:10em;
+}
+.item-preview{
+    width:16em;
+    height:20em;
+    border:0.1em solid;
+    border-color:gold;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color:black;
+}
+.produs{
+    width:12em;
+    padding-left:0.5em;
+    padding-bottom:0.5em;
+    border-bottom:solid;
+    border-bottom-color:mediumseagreen;
+}
+.item{
+    text-decoration: none;
+}
+.adauga-cos{
+    background-color:gold;
+    color:black;
+    width:10em;
+    display:flex;
+    border-radius: 1em;
+    overflow:hidden;
+}
+.valabilitate{
+    color:green;
+    align-self:flex-start;
+    margin:0 0 0.5em 0.5em;
+}
+.valabilitate::before{
+    content: "\2713";
+    margin-left:0.5em;
+}
+.pret{
+    font-weight:bolder;
+    font-size:2vw;
+    margin:0;
+    margin-bottom:0.3em;
+}
+.decimal{
+    font-size:0.7em;
+}
+.viz-select{
+    margin: 3.5em 25em;
+    padding: 0.75em 10em 0.75em 10em;
+    display:flex;
+    width:25em;
+    background-color: mediumseagreen;
+    justify-content: center;
+}
+.viz-text{
+    text-decoration: none;
+    color:antiquewhite;
+}
+.cos-text{
+    align-self:center;
+    justify-self:flex-end;
+    padding-left:1em;
+}
+footer{
+    background-color: gold;
+    width:118em;
+    height:5em;
+    font-size:0.8em;
+}
+@media screen and (max-width:40rem)
+{
+    html{
+        font-size:1em;
+}
+    .item-select{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap:0.5em;
+        margin: 0 35em 0 35em;
+}
+    .item-preview{
+        width:30em;
+        height:35em;
+    }
+    .produs{
+        padding-bottom: 0em;
+        font-size:1.5em;
+    }
+    .pret{
+        font-size:3.5em;
+    }
+    .sliding-promo{
+        margin-left:70em;
+        height:25em;
+        width:50em;
+    }
+    .sliding-promo p{
+        font-size: 10vw;
+    }
+    @keyframes move{
+        0%{
+            transform: translateY(0);
+            transform: translateX(0);
+        }
+        25%{
+            color:chartreuse;
+        }
+        50%{
+            font-size:15vw;
+            color:greenyellow;
+            transform: translate(6vw,9vh);
+        }
+        75%{
+            color:chartreuse;
+        }
+        100%{
+            font-size:10vw;
+            transform: translate(0,0);
+        }
+    }
+    
+    .valabilitate{
+        font-size:2em;
+    }
+    .viz-select{
+        margin: 3.5em 25em;
+        padding: 0.75em 10em 0.75em 10em;      
+    }
+    #Vinyl{
+        content:url("imgs/vinylphone.png");
+    }
+    #Tobe{
+        content:url("imgs/tobephone.png");
+    }
+    #Bass{
+        content:url("imgs/bassphone.png");
+    }
+    #Chitara{
+        content:url("imgs/guitarphone.png");
+    }
+    .adauga-cos{
+        width:15em;
+        height:3em; 
+    }
+}
+@media screen and (min-width:100rem)
+{
+    header{
+        width:100vw;
+    }
+    .sliding-promo{
+        width:55vw;
+        height:40vh;
+    }
+    .intro{
+        font-size:1vw;
+    }
+    .item-preview{
+        width:20vw;
+        height:40vh;
+    }
+    .produs{
+        font-size:2vh;
+    }
+    footer{
+        width:100vw;
+    }
+    .viz-select{
+        width:50vw;
+        margin-right: 25vw;
+        margin-left:15vw;
+        height: 2vh;
+    }
+    .valabilitate{
+        font-size:0.8vw;
+        margin-left:4.5vw;
+    }
+    .adauga-cos{
+        width:10vw;
+        height: 3vh;
+    }
+    .viz-text{
+        font-size: 1vw;
+    }
+}
+@media screen and (min-width:150rem)
+{
+    #Vinyl{
+        content:url("imgs/vinylphone.png");
+    }
+    #Tobe{
+        content:url("imgs/tobephone.png");
+    }
+    #Bass{
+        content:url("imgs/bassphone.png");
+    }
+    #Chitara{
+        content:url("imgs/guitarphone.png");
+    }
+    .item-preview{
+        width:20vw;
+        height:45vh;
+    }
+    .cos-text{
+        font-size:1vw;
+    }
+    header{
+        height:4vw;
+    }
+    header li{
+        font-size:1vw;
+    }
+}
+
